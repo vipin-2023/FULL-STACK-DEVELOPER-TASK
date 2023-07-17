@@ -18,11 +18,28 @@ interface FormValues {
 
 const options: Array<GroupBase<string>> = [
   {
-    label: "Group 1",
+    label: "OPTION 1",
     options: [
-      "option1",
-      "option2",
+      "option1"
+    ],
+  },
+  {
+    label: "OPTION 2",
+    options: [
+      "option2"
+    ],
+  },
+
+  {
+    label: "OPTION 3",
+    options: [
       "option3",
+    ],
+  },
+  {
+    label: "OPTION 4",
+    options: [
+      "option4"
     ],
   },
 ];
@@ -126,7 +143,7 @@ const Form: React.FC = () => {
             </div>
 
             <div className="form-field">
-              <label htmlFor="selectField">Select Field</label>
+              <label htmlFor="selectField">Group Select Fields</label>
               <Controller
                 name="selectField"
                 control={control}

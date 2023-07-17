@@ -2,7 +2,7 @@
 
 This is a basic React application with a form that includes various input fields and validations. It is built using TypeScript and utilizes the react-hook-form library for form handling.
 ## Preview 
-file:///home/loki/Pictures/Screenshots/Screenshot%20from%202023-07-18%2003-58-20.png
+![image](https://github.com/vipin-2023/FULL-STACK-DEVELOPER-TASK/assets/109500059/0e68ae43-e1bb-451a-8d95-5b12d55ff92e)
 ## Prerequisites
 
 - Node.js (v14 or higher) installed on your machine

@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# React TypeScript Form Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a basic React application with a form that includes various input fields and validations. It is built using TypeScript and utilizes the react-hook-form library for form handling.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+- Node.js (v14 or higher) installed on your machine
+- Docker (optional) if you prefer to run the application in a Docker container
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Follow the steps below to run the application locally:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone this repository to your local machine.
+ ```bash
+   git clone https://github.com/your-username/your-repo.git
+   ``` 
 
-### `npm test`
+2. Navigate to the project directory:
+```bash
+  cd react-typescript-form
+   ``` 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Install the dependencies:
+```bash
+  npm install 
+   ``` 
 
-### `npm run build`
+4. Build and start the application:
+```bash
+  npm start
+   ``` 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Running with Docker
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Alternatively, you can run the application in a Docker container. Follow the steps below:
 
-### `npm run eject`
+1. Build the Docker image:
+```
+docker build -t my-react-app .
+``` 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Run the Docker container:
+```
+docker run -d -p 3000:3000 my-react-app
+``` 
+This will start the container and bind port 3000 of the container to port 3000 of your local machine.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Fill in the form fields with the required information.
+- The form includes validations for the Name, Mobile, Email, Password, and Re-enter Password fields.
+- Select an option from the Select Field.
+- Check/uncheck the Checkbox field.
+- Choose one of the options from the Radio Button field.
+- Click the "Submit" button to submit the form.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the [MIT License](LICENSE).

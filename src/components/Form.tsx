@@ -1,64 +1,43 @@
 import React from "react";
 import { useForm, Controller } from "react-hook-form";
-import Select  from "react-select";
+import Select from "react-select";
 import "./form.css";
 import Illustration from "../assets/images/register-img.jpg";
-import { GroupBase ,Options } from "react-select";
+import { GroupBase } from "react-select";
+import {FormValues} from "../types/formValues";
 
-interface FormValues {
-  name: string;
-  mobile: string;
-  email: string;
-  password: string;
-  reEnterPassword: string;
-  selectField: string;
-  checkboxField: boolean;
-  radioButtonField: string;
-}
 
 const options: Array<GroupBase<string>> = [
   {
     label: "OPTION 1",
-    options: [
-      "option1"
-    ],
+    options: ["option1"],
   },
   {
     label: "OPTION 2",
-    options: [
-      "option2"
-    ],
+    options: ["option2"],
   },
-
   {
     label: "OPTION 3",
-    options: [
-      "option3",
-    ],
+    options: ["option3"],
   },
   {
     label: "OPTION 4",
-    options: [
-      "option4"
-    ],
+    options: ["option4"],
   },
 ];
 
 const Form: React.FC = () => {
-
   const {
     register,
-    handleSubmit, control,
+    handleSubmit,
+    control,
     formState: { errors },
     watch,
   } = useForm<FormValues>();
 
   const onSubmit = (data: FormValues) => {
     console.log(data);
-  };
-
-  const handleSelectChange = (selectedOption: any) => {
-    console.log(selectedOption); // Output the selected option to the console
+    alert(data)
   };
 
   const password = watch("password");
@@ -115,7 +94,7 @@ const Form: React.FC = () => {
                 className="input-fields"
                 {...register("password", {
                   pattern:
-                    /^(?=.*\d).{6,}$/,
+                    /^(?=.*[@#$])(?=.*\d.*\d.*\d.*\d)(?=.*[A-Z].*[A-Z])(?=.*[a-z].*[a-z]).{8,}$/,
                 })}
                 type="password"
                 id="password"
@@ -151,7 +130,6 @@ const Form: React.FC = () => {
                   <Select
                     className="select-field"
                     options={options}
-                   
                     onChange={(selectedOption) => {
                       field.onChange(selectedOption || ""); // Pass an empty string if selectedOption is undefined
                     }}

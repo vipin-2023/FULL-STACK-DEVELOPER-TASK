@@ -9,19 +9,17 @@
   justify-content: center;
   align-items: center;
 }
+
 .wrapper {
   height: 70vh;
   width: 50vwh;
   background-color: rgba(243, 243, 243, 0.559);
- 
-
   border-radius: 30px;
   display: flex;
-
 }
+
 .images {
   flex: 1;
- 
   position: relative;
 }
 .wrapper .images img {
@@ -33,7 +31,6 @@
 }
 .form-container {
   flex: 1;
-  
   justify-content: center;
   position: relative;
   padding: 30px 10px 10px 10px;
@@ -47,8 +44,8 @@
 .form-wrapper
 {
   margin-left: 10%;
-    width: 80%;
-   padding: auto;
+  width: 80%;
+  padding: auto;
 }
 label {
   font-weight: bold;
@@ -65,7 +62,7 @@ label {
   font-size: 1rem;
 }
 .input-fields:focus{
-    border-color: lightskyblue;
+  border-color: lightskyblue;
 }
 .select-field {
   margin-bottom: 10px;
@@ -100,7 +97,6 @@ button {
   height: 40px;
   display: flex;
   flex-direction: row;
- 
   align-items: center;
   gap: 20px;
 }
@@ -113,7 +109,6 @@ button {
   height: 40px;
   display: flex;
   flex-direction: row;
- 
   align-items: center;
   justify-content: space-between;
 }
@@ -127,7 +122,6 @@ button {
   width: 20px;
   height: 20px;
 }
-
 button:hover {
   background-color: #1a211a;
 }

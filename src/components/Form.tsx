@@ -3,7 +3,8 @@ import { useForm, Controller } from "react-hook-form";
 import Select  from "react-select";
 import "./form.css";
 import Illustration from "../assets/images/register-img.jpg";
-import { GroupBase } from "react-select";
+import { GroupBase ,Options } from "react-select";
+
 interface FormValues {
   name: string;
   mobile: string;
@@ -15,8 +16,6 @@ interface FormValues {
   radioButtonField: string;
 }
 
-
-
 const options: Array<GroupBase<string>> = [
   {
     label: "Group 1",
@@ -27,32 +26,6 @@ const options: Array<GroupBase<string>> = [
     ],
   },
 ];
-
-
-// interface Option {
-//   label: string;
-//   value: string;
-// }
-
-// const options: Option[] = [
-//   { label: "Option 1", value: "option1" },
-//   { label: "Option 2", value: "option2" },
-//   { label: "Option 3", value: "option3" },
-// ];
-
-// const formatOptionLabel = (option: Option) => (
-//   <div>
-//     <strong>{option.label}</strong> - <em>{option.value}</em>
-//   </div>
-// );
-// const options: Array<string> = [
-//  "option1",
-//      "option2", 
-//       "option3", 
-//     ]
-
-
-
 
 const Form: React.FC = () => {
 
@@ -169,9 +142,6 @@ const Form: React.FC = () => {
                   />
                 )}
               />
-
-
-
             </div>
 
             <div className="form-field" id="checkbox-field">
@@ -205,7 +175,6 @@ const Form: React.FC = () => {
                 <label className="labals"> Option 3</label>
               </div>
             </div>
-
             <div id="submit-button">
               <button type="submit">Submit</button>
             </div>
